@@ -1,0 +1,15 @@
+.contacts {
+  &__title {
+    padding: 0 0 1.25vw;
+
+    font-weight: 700;
+    font-size: 1.146vw;
+    line-height: 1.354vw;
+
+    letter-spacing: 0.052vw;
+    text-align: center;
+
+    border-bottom: 0.156vw solid $line-color;
+    color: $main-title-color;
+  }
+}

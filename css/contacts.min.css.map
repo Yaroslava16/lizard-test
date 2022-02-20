@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,AAAC,CACb,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,OAAO,CAClB,WAAW,CAAE,OAAO,CAEpB,cAAc,CAAE,OAAO,CACxB",
+    "sources": [
+        "../sass/components/contacts.scss"
+    ],
+    "names": [],
+    "file": "contacts.min.css"
+}

@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,IAAI,AAAC,CACH,UAAU,CCHF,OAAO,CDIf,KAAK,CAAE,GAAG,CACX",
+    "mappings": "AECG,AAAD,gBAAQ,AAAC,CACP,OAAO,CAAE,UAAU,CAEnB,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,OAAO,CAClB,WAAW,CAAE,OAAO,CAEpB,cAAc,CAAE,OAAO,CACvB,UAAU,CAAE,MAAM,CAElB,aAAa,CAAE,OAAO,CAAC,KAAK,CDHnB,OAAO,CCIhB,KAAK,CDVU,OAAO,CCWvB,AFVH,AAAA,IAAI,AAAC,CACH,OAAO,CAAE,MAAM,CACf,WAAW,CAAE,oBAAoB,CACjC,UAAU,CCNF,OAAO,CDOhB",
     "sources": [
         "../sass/main.scss",
-        "../src/variables.scss"
+        "../src/variables.scss",
+        "../sass/components/_contacts.scss"
     ],
     "names": [],
     "file": "main.min.css"
