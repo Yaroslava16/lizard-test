@@ -9,6 +9,47 @@
   color: #282b2e;
 }
 
+.contacts__container {
+  margin: 0 auto;
+  padding: 2.135vw 0 3.125vw;
+  width: 72.656vw;
+  height: 300px;
+  background-color: #fff;
+}
+
+.contacts__inputs-wrap {
+  position: relative;
+  width: 65.156vw;
+}
+
+.select {
+  padding: 0.365vw 0.729vw 0.365vw 0.831vw;
+  width: 21.875vw;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.625vw;
+  line-height: 0.729vw;
+  border: 0.037vw solid #6E767D;
+  border-radius: 3.75vw 0 0 3.75vw;
+  color: #333333;
+  appearance: none;
+  background-image: url(../../src/assets/icons/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 20.3vw;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.select:hover, .select:focus {
+  outline: none;
+  border: 0.037vw solid #000;
+}
+
+h1 {
+  margin: 0;
+}
+
 body {
   padding: 1.25vw;
   font-family: "Roboto", sans-serif;

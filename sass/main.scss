@@ -1,6 +1,9 @@
 @import "../src/variables.scss";
 @import "../sass/components/contacts";
 
+h1 {
+  margin: 0;
+}
 body {
   padding: 1.25vw;
   font-family: "Roboto", sans-serif;
