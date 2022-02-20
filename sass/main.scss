@@ -1,12 +1,17 @@
 @import "../src/normalize";
 @import "../src/variables.scss";
+@import "../src/media_mixin";
 @import "../sass/components/contacts";
 
 
 body {
+@include _768{
+  padding: 5.25vw;
+}
   padding: 1.25vw;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   background: $body-bg;
+
 }

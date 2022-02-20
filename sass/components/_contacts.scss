@@ -1,5 +1,11 @@
 .contacts {
   &__title {
+    @include _768 {
+      padding-bottom: 3.25vw;
+      font-size: 5.146vw;
+      line-height: 5.354vw;
+      letter-spacing: 1.052vw;
+    }
     padding: 0 0 1.25vw;
 
     font-weight: 700;
@@ -13,6 +19,11 @@
     color: $main-title-color;
   }
   &__container {
+    @include _768 {
+      width: 100%;
+      padding-top: 5.135vw;
+      padding-bottom: 8.125vw;
+    }
     margin: 0 auto;
     padding: 2.135vw 0 3.125vw;
     width: 72.656vw;
@@ -20,12 +31,24 @@
     background-color: $section-bg;
   }
   &__inputs-wrap {
+    @include _768 {
+      display: block;
+      width: 79.156vw;
+    }
     position: relative;
     display: flex;
     margin: 0 auto 0.625vw;
     width: 65.156vw;
   }
   &__list {
+    @include _768 {
+      padding-top: 15vw !important;
+      margin-bottom: 15.292vw !important;
+      justify-content: center;
+      grid-template-columns: repeat(1, 77.865vw);
+      row-gap: 7.563vw;
+    }
+
     display: grid;
     margin-bottom: 2.292vw !important;
     justify-content: center;
@@ -38,11 +61,16 @@
     justify-content: left;
     align-items: flex-start;
     &-photo {
+      @include _768 {
+        margin-right: 3.458vw;
+      }
       margin-right: 1.458vw;
     }
-    &-info {
-    }
     &-name {
+      @include _768 {
+        font-size: 4.6vw;
+      }
+
       font-size: 0.833vw;
       line-height: 150%;
 
@@ -55,6 +83,12 @@
     &-department,
     &-tel,
     &-email {
+      @include _768 {
+        margin-bottom: 1.26vw;
+        font-size: 3.625vw;
+        line-height: 4.729vw;
+      }
+
       margin-bottom: 0.26vw;
       font-size: 0.625vw;
       line-height: 0.729vw;
@@ -68,6 +102,16 @@
   }
 }
 .select {
+  @include _768 {
+    margin-bottom: 3vw;
+    padding: 1.365vw 2.729vw 1.365vw 4.831vw;
+    width: 100%;
+    height: 11vw;
+    background-position: 71.3vw;
+    border-radius: 4.75vw;
+    line-height: normal;
+    font-size: 4.625vw;
+  }
   padding: 0.365vw 0.729vw 0.365vw 0.831vw;
   width: 21.875vw;
 
@@ -93,6 +137,17 @@
   }
 }
 .search {
+  @include _768 {
+    padding: 2.365vw 3.19vw 2.365vw 4.432vw;
+    width: 100%;
+    height: 11vw;
+    border-radius: 4.75vw;
+    border: 0.037vw solid #6e767d;
+    line-height: 0;
+    font-size: 3vw;
+
+    background-position: 69.6vw;
+  }
   padding: 0.365vw 0.19vw 0.365vw 0.432vw;
   width: 43.272vw;
 
@@ -120,6 +175,13 @@
 }
 .checkbox {
   &__label {
+    @include _768 {
+      margin-left: 3.3vw;
+      font-size: 3.833vw;
+      line-height: 8.99vw;
+      letter-spacing: 0.058vw;
+    }
+
     margin-left: 0.5vw;
     font-style: normal;
     font-weight: normal;
@@ -132,6 +194,9 @@
   }
 }
 .checkbox-google {
+  @include _768 {
+    margin-left: 7vw;
+  }
   display: inline-block;
   height: 1.458vw;
   line-height: 1.458vw;
@@ -142,8 +207,19 @@
   font-size: 0.729vw;
   user-select: none;
 }
-
+.checkbox-position {
+  @include _768 {
+    margin-top: 8vw;
+  }
+}
 .checkbox-google .checkbox-google-switch {
+  @include _768 {
+    width: 14.875vw;
+    height: 6.729vw;
+    border-radius: 5.042vw;
+    top: 1.313vw;
+  }
+
   display: inline-block;
   width: 1.875vw;
   height: 0.729vw;
@@ -157,6 +233,17 @@
 
 .checkbox-google .checkbox-google-switch:before {
   content: "";
+  @include _768 {
+    width: 10.042vw;
+    height: 10.042vw;
+    position: absolute;
+    top: -1.256vw;
+    left: -0.352vw;
+    background: #fff;
+    border-radius: 50%;
+    border: 0.5vw solid #e6e6e6;
+  }
+
   display: inline-block;
   width: 1.042vw;
   height: 1.042vw;
@@ -231,11 +318,19 @@
   }
 }
 .pagination {
+  @include _768 {
+    width: 80%;
+  }
   display: flex;
   justify-content: space-between;
   margin: 0 auto !important;
   width: 9.962vw;
   &__item {
+    @include _768 {
+      width: 8.302vw;
+      height: 8.302vw;
+    }
+
     position: relative;
     width: 1.302vw;
     height: 1.302vw;
@@ -245,6 +340,10 @@
     transition: 0.8s;
     &:hover,
     &:focus {
+      @include _768 {
+        width: 8.302vw;
+        height: 8.302vw;
+      }
       position: relative;
       width: 1.302vw;
       height: 1.302vw;
@@ -252,6 +351,9 @@
       border: 0.067vw solid $active-pagination-item;
 
       span {
+        @include _768 {
+          font-size: 4.729vw;
+        }
         position: absolute;
         top: 50%;
         left: 50%;
@@ -264,6 +366,9 @@
     }
 
     span {
+      @include _768 {
+        font-size: 4.729vw;
+      }
       position: absolute;
       top: 50%;
       left: 50%;
