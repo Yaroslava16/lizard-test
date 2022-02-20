@@ -1,21 +1,10 @@
-/* You can add global variables to this file*/;
+$body-bg: #f7f7f7;
+$section-bg: #fff;
+$main-title-color: #282b2e;
+$black: #000;
+$contacts-color: #212121;
+$italic-text-color: #333333;
+$primary-text-color: #a6aaad;
+$active-pagination-item: #ed1c24;
 
-/*colors*/
-$colorWhite: #ffffff;
-$colorLightgreyBg: #F7F7F7;
-$colorPurple: #ED1C24;
-$colorDarkGrey: #6E767D;
-$colorBlackHeader: #282B2E;
-$colorGrey: #D7D7D7;
-$colorLightgrey: #A6AAAD;
-$colorBlackCard: rgba(0, 0, 0, 0.87);
-$colorDark: #212121;
-$colorBlackForm: rgb(51, 51, 51, 0.8);
-
-
-/*font*/
-$font-stack: Roboto, sans-serif;
-
-
-/*transitions*/
-$transition: .3s;
+$transition: 0.3s;
