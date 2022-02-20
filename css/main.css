@@ -1,3 +1,111 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class],
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "FuturaBTB";
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: text;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+}
+
+/* класс для индикации блоков */
+.outline_red {
+  border: 1px solid;
+  border-color: red;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*Один общий оутлайн для отмечания компонентов на верстаемых страницах*/
+.devOutline {
+  outline-color: red;
+  outline-width: 1px;
+  outline-style: inset;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .contacts__title {
   padding: 0 0 1.25vw;
   font-weight: 700;
@@ -13,7 +121,6 @@
   margin: 0 auto;
   padding: 2.135vw 0 3.125vw;
   width: 72.656vw;
-  height: 300px;
   background-color: #fff;
 }
 
@@ -22,6 +129,44 @@
   display: flex;
   margin: 0 auto 0.625vw;
   width: 65.156vw;
+}
+
+.contacts__list {
+  display: grid;
+  margin-bottom: 2.292vw !important;
+  justify-content: center;
+  grid-template-columns: repeat(3, 17.865vw);
+  column-gap: 3.125vw;
+  row-gap: 1.563vw;
+}
+
+.contacts__contact {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.contacts__contact-photo {
+  margin-right: 1.458vw;
+}
+
+.contacts__contact-name {
+  font-size: 0.833vw;
+  line-height: 150%;
+  letter-spacing: 0.008vw;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.contacts__contact-company, .contacts__contact-position, .contacts__contact-department, .contacts__contact-tel, .contacts__contact-email {
+  margin-bottom: 0.26vw;
+  font-size: 0.625vw;
+  line-height: 0.729vw;
+  color: #a6aaad;
+}
+
+.contacts__contact-tel, .contacts__contact-email {
+  margin-bottom: 0;
+  color: #212121;
 }
 
 .select {
@@ -74,7 +219,7 @@
 }
 
 .checkbox__label {
-  margin-left: 0.3vw;
+  margin-left: 0.5vw;
   font-style: normal;
   font-weight: normal;
   font-size: 0.833vw;
@@ -89,6 +234,7 @@
   height: 1.458vw;
   line-height: 1.458vw;
   margin-left: 4vw;
+  margin-bottom: 1.458vw;
   position: relative;
   vertical-align: middle;
   font-size: 0.729vw;
@@ -186,13 +332,69 @@ input[type="checkbox"]:not(:disabled):checked:focus
   }
 }
 
-h1 {
-  margin: 0;
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto !important;
+  width: 9.962vw;
+}
+
+.pagination__item {
+  position: relative;
+  width: 1.302vw;
+  height: 1.302vw;
+  border-radius: 50%;
+  border: 0.067vw solid #6E767D;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.pagination__item:hover, .pagination__item:focus {
+  position: relative;
+  width: 1.302vw;
+  height: 1.302vw;
+  border-radius: 50%;
+  border: 0.067vw solid #ed1c24;
+}
+
+.pagination__item:hover span, .pagination__item:focus span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 0.729vw;
+  line-height: 0.833vw;
+  color: #ed1c24;
+}
+
+.pagination__item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 0.729vw;
+  line-height: 0.833vw;
+  color: #6E767D;
+}
+
+.pagination__icon {
+  background-image: url(../../src/assets/icons/paginations-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.pagination__icon:hover {
+  background-image: url(../../src/assets/icons/paginations-active-arrow.svg);
 }
 
 body {
   padding: 1.25vw;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background: #f7f7f7;
 }
 /*# sourceMappingURL=main.css.map */
