@@ -248,6 +248,7 @@ a {
     width: 100%;
     height: 11vw;
     background-position: 71.3vw;
+    background-size: 4vw;
     border-radius: 4.75vw;
     line-height: normal;
     font-size: 4.625vw;
@@ -288,6 +289,7 @@ a {
     line-height: 0;
     font-size: 3vw;
     background-position: 69.6vw;
+    background-size: 5vw;
   }
 }
 
@@ -356,10 +358,17 @@ a {
 
 @media (max-width: 767px) {
   .checkbox-google .checkbox-google-switch {
-    width: 14.875vw;
+    width: 10.475vw;
     height: 6.729vw;
     border-radius: 5.042vw;
     top: 1.313vw;
+  }
+}
+
+@media screen and (min-width: 435px) and (max-width: 767px) {
+  .checkbox-google .checkbox-google-switch {
+    width: 13.475vw;
+    height: 7.729vw;
   }
 }
 
@@ -379,14 +388,23 @@ a {
 
 @media (max-width: 767px) {
   .checkbox-google .checkbox-google-switch:before {
-    width: 10.042vw;
-    height: 10.042vw;
+    width: 7.042vw;
+    height: 7.042vw;
     position: absolute;
-    top: -1.256vw;
-    left: -0.352vw;
+    top: 0vw;
+    left: -1vw;
     background: #fff;
     border-radius: 50%;
     border: 0.5vw solid #e6e6e6;
+  }
+}
+
+@media screen and (min-width: 435px) and (max-width: 767px) {
+  .checkbox-google .checkbox-google-switch:before {
+    width: 9.042vw;
+    height: 9.042vw;
+    top: -1vw;
+    left: 0.5vw;
   }
 }
 
