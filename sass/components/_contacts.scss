@@ -21,6 +21,8 @@
   }
   &__inputs-wrap {
     position: relative;
+    display: flex;
+    margin: 0 auto 0.625vw;
     width: 65.156vw;
   }
 }
@@ -42,10 +44,36 @@
   background-position: 20.3vw;
   opacity: 0.8;
   cursor: pointer;
-  transition: $transition;
   &:hover,
   &:focus {
+    font-style: normal;
     outline: none;
     border: 0.037vw solid $black;
+  }
+}
+.search {
+  padding: 0.365vw 0.19vw 0.365vw 0.432vw;
+  width: 43.272vw;
+
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.625vw;
+  line-height: 0.729vw;
+
+  background-image: url(../../src/assets/icons/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 41.6vw;
+  border: 0.037vw solid $inputs-border;
+  border-radius: 0 3.75vw 3.75vw 0;
+  border-left: none;
+  color: $italic-text-color;
+  cursor: pointer;
+  opacity: 0.8;
+  &:hover,
+  &:focus {
+    font-style: normal;
+    outline: none;
+    border: 0.037vw solid $black;
+    border-left: none;
   }
 }
