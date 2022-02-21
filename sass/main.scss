@@ -8,6 +8,12 @@ body {
 @include _768{
   padding: 5.25vw;
 }
+@include _1152 {
+  padding: 3.25vw;
+}
+@include _1440 {
+  padding: 2.25vw;
+}
   padding: 1.25vw;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
