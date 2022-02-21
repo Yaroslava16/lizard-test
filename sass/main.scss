@@ -1,23 +1,24 @@
 @import "../src/normalize";
 @import "../src/variables.scss";
 @import "../src/media_mixin";
+@import "../sass/components/inputs";
+@import "../sass/components/checkbox";
+@import "../sass/components/pagination";
 @import "../sass/components/contacts";
 
-
 body {
-@include _768{
-  padding: 5.25vw;
-}
-@include _1152 {
-  padding: 3.25vw;
-}
-@include _1440 {
-  padding: 2.25vw;
-}
+  @include _768 {
+    padding: 5.25vw;
+  }
+  @include _1152 {
+    padding: 3.25vw;
+  }
+  @include _1440 {
+    padding: 2.25vw;
+  }
   padding: 1.25vw;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   background: $body-bg;
-
 }

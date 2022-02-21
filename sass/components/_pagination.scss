@@ -1,0 +1,106 @@
+.pagination {
+  @include _768 {
+    width: 80%;
+  }
+  @include _1152 {
+    width: 50vw;
+  }
+  @include _1440 {
+    width: 30vw;
+  }
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto !important;
+  width: 9.962vw;
+  &__item {
+    @include _768 {
+      width: 8.302vw;
+      height: 8.302vw;
+    }
+    @include _1152 {
+      width: 6vw;
+      height: 6vw;
+    }
+    @include _1440 {
+      width: 2.302vw;
+      height: 2.302vw;
+    }
+
+    position: relative;
+    width: 1.302vw;
+    height: 1.302vw;
+    border-radius: 50%;
+    border: 0.067vw solid $inputs-border;
+    cursor: pointer;
+    transition: 0.8s;
+    &:hover,
+    &:focus {
+      @include _768 {
+        width: 8.302vw;
+        height: 8.302vw;
+      }
+      @include _1152 {
+        width: 6vw;
+        height: 6vw;
+      }
+      @include _1440 {
+        width: 2.302vw;
+        height: 2.302vw;
+      }
+      position: relative;
+      width: 1.302vw;
+      height: 1.302vw;
+      border-radius: 50%;
+      border: 0.067vw solid $active-pagination-item;
+
+      span {
+        @include _768 {
+          font-size: 4.729vw;
+        }
+        @include _1152 {
+          font-size: 2.529vw;
+        }
+        @include _1440 {
+          font-size: 0.9vw;
+        }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        font-size: 0.729vw;
+        line-height: 0.833vw;
+        color: $active-pagination-item;
+      }
+    }
+
+    span {
+      @include _768 {
+        font-size: 4.729vw;
+      }
+      @include _1152 {
+        font-size: 2.529vw;
+      }
+      @include _1440 {
+        font-size: 0.9vw;
+      }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      font-size: 0.729vw;
+      line-height: 0.833vw;
+      color: $inputs-border;
+    }
+  }
+  &__icon {
+    background-image: url(../../src/assets/icons/paginations-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &:hover {
+      background-image: url(../../src/assets/icons/paginations-active-arrow.svg);
+    }
+  }
+}
